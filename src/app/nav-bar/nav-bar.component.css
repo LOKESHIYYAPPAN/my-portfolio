@@ -1,0 +1,13 @@
+nav {
+    background-color: #48A6A7;
+
+    .logo {
+        font-family: 'logoFont', sans-serif;
+        font-size: 24px;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
