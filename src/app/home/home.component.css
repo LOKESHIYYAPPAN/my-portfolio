@@ -99,3 +99,57 @@ h3 {
         box-shadow: -20px 19px 0px 6px #ffffff;
     }
 }
+
+.animate-slide-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: slideLeft 1s ease-out forwards;
+}
+
+@keyframes slideLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-delay {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-bounce-in {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: bounceIn 0.8s ease-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+}
