@@ -1,13 +1,65 @@
 nav {
-    background-color: #48A6A7;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
     .logo {
         font-family: 'logoFont', sans-serif;
         font-size: 24px;
+        color: #000000;
     }
 
-    a {
-        color: white;
-        text-decoration: none;
+    .navLinks {
+
+        a {
+            color: #000000;
+            text-decoration: none;
+            transition-duration: 200ms;
+            padding: 5px 10px;
+            border-radius: 5px;
+
+            &:hover {
+                color: #FFA725;
+            }
+        }
     }
+
+    .menuIcon {
+        font-size: 26px;
+        width: 34px;
+        height: 34px;
+        display: none;
+        cursor: pointer;
+        transition-duration: 200ms;
+
+        &:hover {
+            color: #FFA725;
+        }
+    }
+}
+
+@media screen and (width <=768px) {
+    nav {
+        .navLinks {
+            flex-direction: column;
+            position: absolute;
+            top: 44px;
+            left: 0;
+            background-color: white;
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .active {
+            max-height: 300px;
+        }
+
+        .menuIcon {
+            display: block;
+        }
+
+
+    }
+
 }
