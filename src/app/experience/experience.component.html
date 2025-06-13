@@ -1,1 +1,18 @@
-<p>experience works!</p>
+<section id="experience" class="experience-section animate-fade-in p-3">
+    <h2 class="gradient-text mb-10 text-center">💼 Experience</h2>
+
+    <div class="timeline-wrapper">
+        <div class="timeline-block" *ngFor="let exp of experiences; let i = index"
+            [ngClass]="{ 'left': i % 2 === 0, 'right': i % 2 !== 0 }">
+            <div class="timeline-content animate-slide-up">
+                <h3 class="job-title">{{ exp.title }}</h3>
+                <h4 class="company-name">{{ exp.company }}</h4>
+                <p class="duration">{{ exp.duration }}</p>
+                <p class="location">{{ exp.location }}</p>
+                <ul class="responsibilities">
+                    <li *ngFor="let task of exp.responsibilities">{{ task }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

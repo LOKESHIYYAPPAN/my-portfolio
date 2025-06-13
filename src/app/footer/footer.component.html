@@ -1,1 +1,12 @@
-<p>footer works!</p>
+<footer class="footer">
+    <div class="footer-content animate-fade-in">
+        <h3 class="text-white">Let's Connect</h3>
+        <div class="social-links">
+            <a *ngFor="let link of socialLinks" [href]="link.url" target="_blank" rel="noopener noreferrer"
+                [attr.aria-label]="link.name" class="icon-link">
+                <i [ngClass]="'fab fa-' + link.icon"></i>
+            </a>
+        </div>
+        <p class="footer-note">© {{ getYear() }} Lokesh Iyyappan. All rights reserved.</p>
+    </div>
+</footer>

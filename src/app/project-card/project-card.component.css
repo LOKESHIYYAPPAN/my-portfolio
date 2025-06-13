@@ -1,0 +1,140 @@
+.project-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Colorful gradient backgrounds for each card */
+.gradient-0 {
+    background: linear-gradient(135deg, #ffbb0033 0%, #fd9f0733 100%);
+}
+
+.gradient-1 {
+    background: linear-gradient(135deg, #ff6b6b33 0%, #ff8e5333 100%);
+}
+
+.gradient-2 {
+    background: linear-gradient(135deg, #4ecdc433 0%, #6dd5fa33 100%);
+}
+
+.gradient-3 {
+    background: linear-gradient(135deg, #a1c4fd33 0%, #c2e9fb33 100%);
+}
+
+.gradient-4 {
+    background: linear-gradient(135deg, #ff9a9e33 0%, #fad0c433 100%);
+}
+
+.gradient-5 {
+    background: linear-gradient(135deg, #d4fc7933 0%, #96e6a133 100%);
+}
+
+.gradient-6 {
+    background: linear-gradient(135deg, #84fab033 0%, #8fd3f433 100%);
+}
+
+.gradient-7 {
+    background: linear-gradient(135deg, #f6d36533 0%, #fda08533 100%);
+}
+
+.gradient-8 {
+    background: linear-gradient(135deg, #a18cd133 0%, #fbc2eb33 100%);
+}
+
+.gradient-9 {
+    background: linear-gradient(135deg, #48c6ef33 0%, #6f86d633 100%);
+}
+
+.gradient-10 {
+    background: linear-gradient(135deg, #e0c3fc33 0%, #8ec5fc33 100%);
+}
+
+.gradient-11 {
+    background: linear-gradient(135deg, #ffecd233 0%, #fcb69f33 100%);
+}
+
+.gradient-12 {
+    background: linear-gradient(135deg, #88d3ce33 0%, #6dd5fa33 100%);
+}
+
+.gradient-13 {
+    background: linear-gradient(135deg, #fad0c433 0%, #ffd1ff33 100%);
+}
+
+.gradient-14 {
+    background: linear-gradient(135deg, #ff9a9e33 0%, #fecfef33 100%);
+}
+
+.gradient-15 {
+    background: linear-gradient(135deg, #c3cfe233 0%, #f093fb33 100%);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.card-description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.tech-badge {
+    /* background: #f0f0f0 !important;
+    color: #333 !important; */
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 0.3rem 0.6rem;
+    /* Reduced padding for smaller buttons */
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.75rem;
+    /* Reduced font size */
+    transition: opacity 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #ffbb00 0%, #fd9f07 100%);
+    color: #fff;
+    border: none;
+}
+
+.btn-secondary {
+    background: #333;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    opacity: 0.9;
+}

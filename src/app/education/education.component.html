@@ -1,1 +1,15 @@
-<p>education works!</p>
+<section id="education" class="experience-section animate-fade-in">
+    <h2 class="gradient-text mb-10 text-center">🎓 Education</h2>
+
+    <div class="timeline-wrapper">
+        <div class="timeline-block" *ngFor="let edu of education; let i = index"
+            [ngClass]="{ 'left': i % 2 === 0, 'right': i % 2 !== 0 }">
+            <div class="timeline-content animate-slide-up shadow">
+                <h3 class="job-title">{{ edu.degree }}</h3>
+                <p class="duration"><strong>Duration:</strong> {{ edu.duration }}</p>
+                <p class="company-name">{{ edu.institution }}</p>
+                <p class="location"><strong>Percentage:</strong> {{ edu.percentage }}</p>
+            </div>
+        </div>
+    </div>
+</section>

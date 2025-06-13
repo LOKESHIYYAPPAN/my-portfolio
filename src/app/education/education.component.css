@@ -1,0 +1,46 @@
+.experience-section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-wrapper {
+    position: relative;
+    margin-top: 2rem;
+    padding-left: 1rem;
+}
+
+.timeline-block {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-block.left .timeline-content {
+    margin-left: 0;
+}
+
+.timeline-block.right .timeline-content {
+    margin-left: auto;
+    text-align: right;
+}
+
+.timeline-content {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.job-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.company-name,
+.duration,
+.location {
+    font-size: 0.95rem;
+    color: #444;
+    margin: 0.3rem 0;
+}

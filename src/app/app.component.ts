@@ -7,10 +7,11 @@ import { SkillsComponent } from "./skills/skills.component";
 import { ProjectsComponent } from "./projects/projects.component";
 import { ExperienceComponent } from "./experience/experience.component";
 import { EducationComponent } from "./education/education.component";
+import { ContactComponent } from "./contact/contact.component";
 
 @Component({
   selector: 'app-root',
-  imports: [NavBarComponent, FooterComponent, HomeComponent, AboutComponent, SkillsComponent, ProjectsComponent, ExperienceComponent, EducationComponent],
+  imports: [NavBarComponent, FooterComponent, HomeComponent, AboutComponent, SkillsComponent, ProjectsComponent, ExperienceComponent, EducationComponent, ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

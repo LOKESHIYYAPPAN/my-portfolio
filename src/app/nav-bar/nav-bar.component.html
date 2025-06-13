@@ -1,13 +1,13 @@
 <nav class="d-flex align-items-center justify-content-between py-1 px-3 gap-3">
-    <a routerLink="/" fragment="home" class="logo text-decoration-none">Portfolio</a>
+    <a href="#home" class="logo text-decoration-none" (click)="closeMenuOnNavigate()">Portfolio</a>
 
     <div class="navLinks d-flex align-items-center gap-1 p-1" [ngClass]="{'active': menuShown}">
-        <a routerLink="/" fragment="about">About</a>
-        <a routerLink="/" fragment="skills">Skills</a>
-        <a routerLink="/" fragment="projects">Projects</a>
-        <a routerLink="/" fragment="experience">Experience</a>
-        <a routerLink="/" fragment="education">Education</a>
-        <a routerLink="/" fragment="contact">Contact</a>
+        <a href="#about" (click)="closeMenuOnNavigate()">About</a>
+        <a href="#skills" (click)="closeMenuOnNavigate()">Skills</a>
+        <a href="#projects" (click)="closeMenuOnNavigate()">Projects</a>
+        <a href="#experience" (click)="closeMenuOnNavigate()">Experience</a>
+        <a href="#education" (click)="closeMenuOnNavigate()">Education</a>
+        <a href="#contact" (click)="closeMenuOnNavigate()">Contact</a>
     </div>
 
     <mat-icon class="p-1 menuIcon" role="button" (click)="toggleMenu()">menu</mat-icon>

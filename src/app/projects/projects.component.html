@@ -1,1 +1,9 @@
-<p>projects works!</p>
+<section class="p-3 m-auto projects-section animate-fade-in">
+    <h2 class="gradient-text mb-5">📁 Projects</h2>
+    <div class="projects-grid">
+        <app-project-card *ngFor="let project of projects; let i = index" [title]="project.title"
+            [description]="project.description" [tech]="project.tech" [liveLink]="project.liveLink"
+            [codeLink]="project.codeLink" [cardIndex]="i" class="animate-slide-up">
+        </app-project-card>
+    </div>
+</section>
