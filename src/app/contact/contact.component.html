@@ -1,1 +1,38 @@
-<p>contact works!</p>
+<section id="contact" class="px-2 py-5 m-auto contact-section animate-fade-in">
+    <h2 class="gradient-text mb-5">📬 Contact Me</h2>
+
+    <form class="contact-form needs-validation animate-slide-up d-flex flex-column" [formGroup]="contactForm"
+        (ngSubmit)="submit()">
+        <div class="mb-3">
+            <label for="name" class="form-label fw-semibold">Name</label>
+            <input type="text" id="name" class="form-control" formControlName="name" placeholder="Your Name" />
+            <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                <small *ngIf="contactForm.get('name')?.errors?.['required']" class="text-danger">Name is
+                    required.</small>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label fw-semibold">Email</label>
+            <input type="email" id="email" class="form-control" formControlName="email" placeholder="you@example.com" />
+            <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                <small *ngIf="contactForm.get('email')?.errors?.['required']" class="text-danger">Email is
+                    required.</small>
+                <small *ngIf="contactForm.get('email')?.errors?.['email']" class="text-danger">Invalid email
+                    format.</small>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="message" class="form-label fw-semibold">Message</label>
+            <textarea id="message" rows="5" class="form-control" formControlName="message"
+                placeholder="Your message..."></textarea>
+            <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+                <small *ngIf="contactForm.get('message')?.errors?.['required']" class="text-danger">Message is
+                    required.</small>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary mt-3 mx-auto">Send Message</button>
+    </form>
+</section>
