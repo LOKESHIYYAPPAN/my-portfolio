@@ -12,6 +12,13 @@ export class ProjectsComponent {
 
   projects = [
     {
+      title: 'Portfolio Contact API',
+      tech: ['Node.js', 'Express.js', 'JavaScript'],
+      description: 'A backend API built with Express.js to handle contact form submissions from a portfolio site. It validates inputs and sends acknowledgment and notification emails using Nodemailer with Gmail SMTP. Includes CORS setup for secure frontend communication.',
+      liveLink: 'https://mail-api-qntb.onrender.com/health',
+      codeLink: 'https://github.com/LOKESHIYYAPPAN/mail-api'
+    },
+    {
       title: 'Expense Tracker Web App',
       tech: ['React.js', 'JavaScript', 'CSS', 'HTML'],
       description: 'A responsive application to track daily expenses with support for income and expense tracking, balance summary, history management, and local storage persistence. Includes dynamic UI rendering and transaction categorization.',
