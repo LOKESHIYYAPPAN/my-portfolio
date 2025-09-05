@@ -12,6 +12,13 @@ export class ProjectsComponent {
 
   projects = [
     {
+      title: "Google Sheet API Integration",
+      tech: ["Angular", "TypeScript", "SCSS", "Google Sheets API"],
+      description: "An interactive Angular dashboard that fetches and displays expense and contribution data directly from Google Sheets using a Google Cloud Console API Key. Features include summary cards, data tables, and a fully responsive UI for seamless cross-device experience.",
+      liveLink: "https://google-sheet-integration-beta.vercel.app/",
+      codeLink: "https://github.com/LOKESHIYYAPPAN/Google-Sheet-Integration"
+    },
+    {
       title: 'Portfolio Contact API',
       tech: ['Node.js', 'Express.js', 'JavaScript'],
       description: 'A backend API built with Express.js to handle contact form submissions from a portfolio site. It validates inputs and sends acknowledgment and notification emails using Nodemailer with Gmail SMTP. Includes CORS setup for secure frontend communication.',
