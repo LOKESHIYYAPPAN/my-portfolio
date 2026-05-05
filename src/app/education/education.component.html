@@ -1,14 +1,18 @@
-<section id="education" class="experience-section animate-fade-in">
-    <h2 class="gradient-text mb-10 text-center">🎓 Education</h2>
+<section class="education-section section-padding animate-fade-up">
+    <div class="text-center mb-5">
+        <h2 class="section-title">Education</h2>
+    </div>
 
-    <div class="timeline-wrapper">
-        <div class="timeline-block" *ngFor="let edu of education; let i = index"
-            [ngClass]="{ 'left': i % 2 === 0, 'right': i % 2 !== 0 }">
-            <div class="timeline-content animate-slide-up shadow">
-                <h3 class="job-title">{{ edu.degree }}</h3>
-                <p class="duration"><strong>Duration:</strong> {{ edu.duration }}</p>
-                <p class="company-name">{{ edu.institution }}</p>
-                <p class="location"><strong>Percentage:</strong> {{ edu.percentage }}</p>
+    <div class="education-grid">
+        <div class="edu-card" *ngFor="let edu of education">
+            <div class="edu-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="edu-info">
+                <span class="edu-duration">{{ edu.duration }}</span>
+                <h3 class="edu-degree">{{ edu.degree }}</h3>
+                <p class="edu-institution">{{ edu.institution }}</p>
+                <div class="edu-badge">Score: {{ edu.percentage }}</div>
             </div>
         </div>
     </div>

@@ -1,9 +1,32 @@
-<section class="p-3 m-auto projects-section animate-fade-in">
-    <h2 class="gradient-text mb-5">📁 Projects</h2>
+<section class="projects-section section-padding animate-fade-up">
+    <div class="text-center mb-5">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="text-muted">A selection of my recent work and open-source contributions.</p>
+    </div>
+
     <div class="projects-grid">
-        <app-project-card *ngFor="let project of projects; let i = index" [title]="project.title"
-            [description]="project.description" [tech]="project.tech" [liveLink]="project.liveLink"
-            [codeLink]="project.codeLink" [cardIndex]="i" class="animate-slide-up">
-        </app-project-card>
+        <div class="project-card" *ngFor="let project of projects">
+            <div class="card-content">
+                <div class="card-header d-flex justify-content-between align-items-start mb-3">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <div class="project-links">
+                        <a [href]="project.codeLink" target="_blank" class="link-icon" title="View Source">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a [href]="project.liveLink" *ngIf="project.liveLink" target="_blank" class="link-icon" title="View Demo">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-description mb-4">{{ project.description }}</p>
+                <div class="tech-stack">
+                    <span class="tech-tag" *ngFor="let t of project.tech">{{ t }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="https://github.com/LOKESHIYYAPPAN" target="_blank" class="btn-outline-custom">View More on GitHub</a>
     </div>
 </section>

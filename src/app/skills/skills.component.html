@@ -1,48 +1,72 @@
-<section id="skills" class="p-3 m-auto text-align-center skills-section animate-fade-in">
-    <h2 class="gradient-text mb-5">🛠️ Skills</h2>
-
-    <!-- Frontend Skills -->
-    <div class="mb-4 animate-slide-up">
-        <h4 class="text-start fw-semibold mb-3">Frontend</h4>
-        <div class="skills-grid">
-            <app-skill-card *ngFor="let skill of frontendSkills" [title]="skill.name" [icon]="skill.icon"
-                class="animate-slide-up d-flex justify-content-center align-items-center"></app-skill-card>
-        </div>
+<section class="skills-section section-padding animate-fade-up">
+    <div class="text-center mb-5">
+        <h2 class="section-title">My Expertise</h2>
     </div>
 
-    <!-- Backend Skills -->
-    <div class="mb-4 animate-slide-up">
-        <h4 class="text-start fw-semibold mb-3">Backend</h4>
-        <div class="skills-grid">
-            <app-skill-card *ngFor="let skill of backendSkills" [title]="skill.name" [icon]="skill.icon"
-                class="animate-slide-up d-flex justify-content-center align-items-center"></app-skill-card>
+    <div class="skills-container">
+        <!-- Frontend -->
+        <div class="skill-group mb-5">
+            <h4 class="group-title mb-4">Frontend Development</h4>
+            <div class="skills-flex">
+                <div class="skill-pill" *ngFor="let skill of frontendSkills">
+                    <img *ngIf="skill.icon" [src]="skill.icon" [alt]="skill.name" class="skill-icon">
+                    <i *ngIf="skill.faIcon" [class]="skill.faIcon + ' skill-fa-icon'"></i>
+                    <span>{{ skill.name }}</span>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!-- Database Skills -->
-    <div class="mb-4 animate-slide-up">
-        <h4 class="text-start fw-semibold mb-3">Database</h4>
-        <div class="skills-grid">
-            <app-skill-card *ngFor="let skill of databaseSkills" [title]="skill.name" [icon]="skill.icon"
-                class="animate-slide-up d-flex justify-content-center align-items-center"></app-skill-card>
+        <!-- Backend & DB -->
+        <div class="skill-group mb-5">
+            <h4 class="group-title mb-4">Backend & Database</h4>
+            <div class="skills-flex">
+                <div class="skill-pill" *ngFor="let skill of backendSkills">
+                    <img *ngIf="skill.icon" [src]="skill.icon" [alt]="skill.name" class="skill-icon">
+                    <i *ngIf="skill.faIcon" [class]="skill.faIcon + ' skill-fa-icon'"></i>
+                    <span>{{ skill.name }}</span>
+                </div>
+                <div class="skill-pill" *ngFor="let skill of databaseSkills">
+                    <img *ngIf="skill.icon" [src]="skill.icon" [alt]="skill.name" class="skill-icon">
+                    <i *ngIf="skill.faIcon" [class]="skill.faIcon + ' skill-fa-icon'"></i>
+                    <span>{{ skill.name }}</span>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!-- Tools -->
-    <div class="mb-4 animate-slide-up">
-        <h4 class="text-start fw-semibold mb-3">Tools</h4>
-        <div class="skills-grid">
-            <app-skill-card *ngFor="let skill of toolSkills" [title]="skill.name" [icon]="skill.icon"
-                class="animate-slide-up d-flex justify-content-center align-items-center"></app-skill-card>
+        <!-- Cloud & Infrastructure -->
+        <div class="skill-group mb-5">
+            <h4 class="group-title mb-4">Cloud & Infrastructure</h4>
+            <div class="skills-flex">
+                <div class="skill-pill" *ngFor="let skill of cloudSkills">
+                    <img *ngIf="skill.icon" [src]="skill.icon" [alt]="skill.name" class="skill-icon">
+                    <i *ngIf="skill.faIcon" [class]="skill.faIcon + ' skill-fa-icon'"></i>
+                    <span>{{ skill.name }}</span>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!-- Soft Skills -->
-    <div class="mb-4 animate-slide-up">
-        <h4 class="text-start fw-semibold mb-3">Soft Skills</h4>
-        <div class="skills-grid">
-            <app-skill-card *ngFor="let skill of softSkills" [title]="skill.name" [icon]="skill.icon"
-                class="animate-slide-up d-flex justify-content-center align-items-center"></app-skill-card>
+        <!-- AI & Machine Learning -->
+        <div class="skill-group mb-5">
+            <h4 class="group-title mb-4">AI & Machine Learning</h4>
+            <div class="skills-flex">
+                <div class="skill-pill" *ngFor="let skill of aiSkills">
+                    <img *ngIf="skill.icon" [src]="skill.icon" [alt]="skill.name" class="skill-icon">
+                    <i *ngIf="skill.faIcon" [class]="skill.faIcon + ' skill-fa-icon'"></i>
+                    <span>{{ skill.name }}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-group">
+            <h4 class="group-title mb-4">Tools & Others</h4>
+            <div class="skills-flex">
+                <div class="skill-pill" *ngFor="let skill of toolSkills">
+                    <img *ngIf="skill.icon" [src]="skill.icon" [alt]="skill.name" class="skill-icon">
+                    <i *ngIf="skill.faIcon" [class]="skill.faIcon + ' skill-fa-icon'"></i>
+                    <span>{{ skill.name }}</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>

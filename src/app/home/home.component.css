@@ -1,155 +1,60 @@
-h3 {
-    font-size: 3.5rem;
-    font-weight: 800;
+.hero-section {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
 }
 
-.fl {
-    color: #FFA725;
-    font-weight: bolder;
-    font-size: 3.6rem;
+.role-tag {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
 }
 
-.imgDiv {
-    width: 100%;
-    max-width: 500px;
-    background: #FFE6A2;
-    background: -webkit-linear-gradient(90deg, #ffe6a2 0%, #eddd53 100%);
-    background: -moz-linear-gradient(90deg, #ffe6a2 0%, #eddd53 100%);
-    background: linear-gradient(90deg, #ffe6a2 0%, #eddd53 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFE6A2", endColorstr="#EDDD53", GradientType=1);
-    border-radius: 50px;
-
-    .myPhoto {
-        max-width: 300px;
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.19));
-    }
-
-    .iconsDiv {
-        background-color: white;
-        padding: 10px;
-
-        img {
-            width: 40px;
-            height: 40px;
-            object-fit: cover;
-            border-radius: 100%;
-        }
-
-        mat-icon {
-            width: 30px;
-            height: 30px;
-            font-size: 30px;
-            color: #FFA725;
-        }
-
-    }
-
-    .topRight {
-        border-radius: 0 0 0 30px;
-    }
-
-    .topRight::before,
-    .topRight::after {
-        content: "";
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        background-color: transparent;
-        border-radius: 30px;
-    }
-
-    .topRight::before {
-        top: 0;
-        right: 100%;
-        box-shadow: 12px -12px 0px 0px #ffffff;
-    }
-
-    .topRight::after {
-        top: 100%;
-        right: 0;
-        box-shadow: 20px -19px 0px 6px #ffffff;
-    }
-
-    .bottomLeft {
-        border-radius: 0 30px 0 0;
-    }
-
-    .bottomLeft::before,
-    .bottomLeft::after {
-        content: "";
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        background-color: transparent;
-        border-radius: 30px;
-    }
-
-    .bottomLeft::before {
-        bottom: 0;
-        left: 100%;
-        box-shadow: -12px 12px 0px 0px #ffffff;
-    }
-
-    .bottomLeft::after {
-        bottom: 100%;
-        left: 0;
-        box-shadow: -20px 19px 0px 6px #ffffff;
-    }
+.gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.animate-slide-left {
-    opacity: 0;
-    transform: translateX(-40px);
-    animation: slideLeft 1s ease-out forwards;
+.hero-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: var(--medium-shadow);
+    z-index: 2;
+    position: relative;
 }
 
-@keyframes slideLeft {
-    to {
-        opacity: 1;
-        transform: translateX(0);
+.image-wrapper {
+    position: relative;
+}
+
+.blob-bg {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.05) 100%);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    filter: blur(40px);
+    animation: blobMove 10s infinite alternate;
+    z-index: 1;
+}
+
+@keyframes blobMove {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(20px, 40px) scale(1.1); }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding-top: 2rem;
     }
-}
-
-.animate-fade-delay {
-    opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
-    animation-delay: 0.5s;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
+    .hero-btns {
+        justify-content: center;
     }
-}
-
-.animate-bounce-in {
-    opacity: 0;
-    transform: scale(0.9);
-    animation: bounceIn 0.8s ease-out forwards;
-    animation-delay: 1s;
-}
-
-@keyframes bounceIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-
-    60% {
-        opacity: 1;
-        transform: scale(1.05);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.animate-fade-in {
-    animation: fadeIn 1s ease-out forwards;
-    opacity: 0;
 }

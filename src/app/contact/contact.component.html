@@ -1,38 +1,57 @@
-<section id="contact" class="px-2 py-5 m-auto contact-section animate-fade-in">
-    <h2 class="gradient-text mb-5">📬 Contact Me</h2>
+<section class="contact-section section-padding animate-fade-up">
+    <div class="row">
+        <div class="col-md-5 mb-5 mb-md-0">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="text-muted lead mb-4">I'm always open to discussing new projects, creative ideas or opportunities
+                to be part of your visions.</p>
 
-    <form class="contact-form needs-validation animate-slide-up d-flex flex-column" [formGroup]="contactForm"
-        (ngSubmit)="submit()">
-        <div class="mb-3">
-            <label for="name" class="form-label fw-semibold">Name</label>
-            <input type="text" id="name" class="form-control" formControlName="name" placeholder="Your Name" />
-            <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
-                <small *ngIf="contactForm.get('name')?.errors?.['required']" class="text-danger">Name is
-                    required.</small>
+            <div class="contact-info mt-5">
+                <div class="info-item d-flex align-items-center mb-4">
+                    <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="info-text">
+                        <span class="label">Email</span>
+                        <p>lok493770&#64;gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item d-flex align-items-center mb-4">
+                    <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="info-text">
+                        <span class="label">Location</span>
+                        <p>Chidambaram, Tamil Nadu</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-links d-flex gap-3 mt-5">
+                <a href="https://github.com/LOKESHIYYAPPAN" target="_blank" class="social-icon"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/lokesh-iyyappan" target="_blank" class="social-icon"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
             </div>
         </div>
 
-        <div class="mb-3">
-            <label for="email" class="form-label fw-semibold">Email</label>
-            <input type="email" id="email" class="form-control" formControlName="email" placeholder="you@example.com" />
-            <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
-                <small *ngIf="contactForm.get('email')?.errors?.['required']" class="text-danger">Email is
-                    required.</small>
-                <small *ngIf="contactForm.get('email')?.errors?.['email']" class="text-danger">Invalid email
-                    format.</small>
+        <div class="col-md-7">
+            <div class="contact-card p-4 p-md-5">
+                <form [formGroup]="contactForm" (ngSubmit)="submit()" class="contact-form">
+                    <div class="form-group mb-4">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-input" formControlName="name" placeholder="John Doe">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-input" formControlName="email" placeholder="john@example.com">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-input" formControlName="message" rows="4"
+                            placeholder="How can I help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary-custom w-100 mt-2" [disabled]="contactForm.invalid">
+                        Send Message <i class="fa-solid fa-paper-plane ms-2"></i>
+                    </button>
+                </form>
             </div>
         </div>
-
-        <div class="mb-3">
-            <label for="message" class="form-label fw-semibold">Message</label>
-            <textarea id="message" rows="5" class="form-control" formControlName="message"
-                placeholder="Your message..."></textarea>
-            <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
-                <small *ngIf="contactForm.get('message')?.errors?.['required']" class="text-danger">Message is
-                    required.</small>
-            </div>
-        </div>
-
-        <button type="submit" class="btn btn-outline-primary mt-3 mx-auto">Send Message</button>
-    </form>
+    </div>
 </section>

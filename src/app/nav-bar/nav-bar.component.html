@@ -1,14 +1,21 @@
-<nav class="d-flex align-items-center justify-content-between py-1 px-3 gap-3">
-    <a href="#home" class="logo text-decoration-none" (click)="closeMenuOnNavigate()">Portfolio</a>
+<nav class="glass-nav px-4 py-3 d-flex align-items-center justify-content-between">
+    <a href="#home" class="logo" (click)="closeMenuOnNavigate()">
+        <span class="logo-text">Lokesh<span>.</span></span>
+    </a>
 
-    <div class="navLinks d-flex align-items-center gap-1 p-1" [ngClass]="{'active': menuShown}">
-        <a href="#about" (click)="closeMenuOnNavigate()">About</a>
-        <a href="#skills" (click)="closeMenuOnNavigate()">Skills</a>
-        <a href="#projects" (click)="closeMenuOnNavigate()">Projects</a>
-        <a href="#experience" (click)="closeMenuOnNavigate()">Experience</a>
-        <a href="#education" (click)="closeMenuOnNavigate()">Education</a>
-        <a href="#contact" (click)="closeMenuOnNavigate()">Contact</a>
+    <div class="nav-links-wrapper" [class.active]="menuShown">
+        <div class="nav-links d-flex align-items-center gap-4">
+            <a href="#about" class="nav-link" (click)="closeMenuOnNavigate()">About</a>
+            <a href="#skills" class="nav-link" (click)="closeMenuOnNavigate()">Skills</a>
+            <a href="#projects" class="nav-link" (click)="closeMenuOnNavigate()">Projects</a>
+            <a href="#experience" class="nav-link" (click)="closeMenuOnNavigate()">Experience</a>
+            <a href="#education" class="nav-link" (click)="closeMenuOnNavigate()">Education</a>
+            <a href="assets/Lokesh_Iyyappan_Full_Stack_Developer_Resume.pdf" download class="nav-link resume-link">Resume</a>
+            <a href="#contact" class="nav-link contact-btn" (click)="closeMenuOnNavigate()">Contact</a>
+        </div>
     </div>
 
-    <mat-icon class="p-1 menuIcon" role="button" (click)="toggleMenu()">menu</mat-icon>
+    <button class="mobile-toggle d-md-none" (click)="toggleMenu()">
+        <mat-icon>{{ menuShown ? 'close' : 'menu' }}</mat-icon>
+    </button>
 </nav>

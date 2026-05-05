@@ -12,26 +12,27 @@ export class ExperienceComponent {
   experiences = [
     {
       title: 'Associate Full Stack Developer',
-      company: 'BomWhiz Technologies',
-      duration: 'Feb 2025 - Present',
+      company: 'BornWhiz Technologies',
+      duration: '09/2024 - 05/2026',
       location: 'Chidambaram, India',
       responsibilities: [
-        'Promoted to Full Stack Developer after successful internship and backend skill acquisition.',
-        'Independently developed and maintained frontend in Angular and backend services in Node.js/Express.js.',
-        'Implemented REST APIs and integrated with MongoDB for application features.',
-        'Participated in architectural planning, code reviews, and Agile development ceremonies.'
+        'Led a team of 4 developers, coordinating tasks, reviewing code, and ensuring timely delivery of features.',
+        'Designed and developed a full-stack educational web platform using Angular, Node.js, and MongoDB.',
+        'Built responsive frontend UI and developed backend REST APIs, integrating both layers seamlessly.',
+        'Optimized application performance by resolving Angular RxJS memory leaks, improving stability and user experience.',
+        'Increased team productivity from ~200 to 400–500 tasks/day (2x) through effective leadership and optimization.'
       ]
     },
     {
       title: 'Frontend Developer Intern',
-      company: 'BomWhiz Technologies',
-      duration: 'Sep 2024 - Feb 2025',
+      company: 'BornWhiz Technologies',
+      duration: '09/2024 - 02/2025',
       location: 'Chidambaram, India',
       responsibilities: [
-        'Developed responsive and dynamic user interfaces using Angular and Bootstrap.',
-        'Improved frontend performance and implemented reusable components.',
-        'Gradually trained in backend development with Node.js, Express.js, and MongoDB.',
-        'Collaborated closely with senior developers to understand full stack workflows and project structure.'
+        'Built dynamic and responsive Angular user interfaces for an educational web platform.',
+        'Built reusable Angular components and responsive layouts with CSS and Bootstrap.',
+        'Integrated frontend with backend APIs and handled API responses efficiently.',
+        'Participated in debugging and resolving issues in both development and production environments.'
       ]
     }
   ];

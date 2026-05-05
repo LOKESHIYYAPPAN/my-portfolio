@@ -1,46 +1,86 @@
-.experience-section {
+.section-title {
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.edu-card {
+    background: var(--surface-color);
     padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    display: flex;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--soft-shadow);
 }
 
-.timeline-wrapper {
-    position: relative;
-    margin-top: 2rem;
-    padding-left: 1rem;
+.edu-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: var(--medium-shadow);
 }
 
-.timeline-block {
-    position: relative;
-    margin-bottom: 2rem;
+.edu-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    background: var(--primary-light);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
 }
 
-.timeline-block.left .timeline-content {
-    margin-left: 0;
-}
-
-.timeline-block.right .timeline-content {
-    margin-left: auto;
-    text-align: right;
-}
-
-.timeline-content {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.job-title {
-    font-size: 1.2rem;
+.edu-duration {
+    font-size: 0.8rem;
     font-weight: 600;
+    color: var(--primary-color);
+    display: block;
     margin-bottom: 0.5rem;
 }
 
-.company-name,
-.duration,
-.location {
-    font-size: 0.95rem;
-    color: #444;
-    margin: 0.3rem 0;
+.edu-degree {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+}
+
+.edu-institution {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.edu-badge {
+    display: inline-block;
+    padding: 0.2rem 0.75rem;
+    background: var(--bg-color);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
 }
